@@ -1,0 +1,24 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# IDE
+.idea/
+*.iml
+.vscode/
+*.swp
+*~
+
+# Backups
+*.bak
+*.bak.*
+*~
+
+# Deploy script (contains credentials)
+deploy.sh
+
+# Logs / temp
+*.log
+*.tmp
+.cache/
