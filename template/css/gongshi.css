@@ -1,0 +1,159 @@
+.gongshi-list {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.gongshi-list-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 20px;
+    border-bottom: 1px solid #e5e5e5;
+    color: #333;
+    text-decoration: none;
+    transition: background-color 0.2s;
+}
+
+.gongshi-list-item:hover {
+    background-color: #f8f8f8;
+    color: #333;
+}
+
+.gongshi-list-title {
+    flex: 1;
+    font-size: 16px;
+    line-height: 1.6;
+    padding-right: 20px;
+}
+
+.gongshi-list-date {
+    flex-shrink: 0;
+    color: #888;
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+.gongshi-detail {
+    max-width: 900px;
+    margin: 0 auto;
+    color: #333;
+    font-size: 15px;
+    line-height: 1.9;
+}
+
+.gongshi-back {
+    margin-bottom: 24px;
+}
+
+.gongshi-back a {
+    color: #666;
+    text-decoration: none;
+}
+
+.gongshi-back a:hover {
+    color: #333;
+    text-decoration: underline;
+}
+
+.gongshi-main-title {
+    text-align: center;
+    font-size: 22px;
+    font-weight: bold;
+    line-height: 1.6;
+    margin: 0 0 12px;
+    color: #222;
+}
+
+.gongshi-sub-title {
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 1.6;
+    margin: 0 0 30px;
+    color: #222;
+}
+
+.gongshi-content {
+    margin-bottom: 36px;
+}
+
+.gongshi-content p {
+    margin: 0 0 16px;
+    text-align: justify;
+}
+
+.gongshi-content a {
+    color: #0066cc;
+}
+
+.gongshi-sign {
+    text-align: right;
+    margin: 40px 0 36px;
+    line-height: 1.8;
+}
+
+.gongshi-sign p {
+    margin: 0;
+}
+
+.gongshi-attachments {
+    border-top: 1px solid #e5e5e5;
+    padding-top: 24px;
+}
+
+.gongshi-attachments h3 {
+    font-size: 16px;
+    margin: 0 0 16px;
+    color: #222;
+}
+
+.gongshi-attachments ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.gongshi-attachments li {
+    padding: 10px 0;
+    border-bottom: 1px dashed #eee;
+}
+
+.gongshi-attachments a {
+    color: #0066cc;
+    text-decoration: none;
+}
+
+.gongshi-attachments a:hover {
+    text-decoration: underline;
+}
+
+.gongshi-file-size {
+    color: #999;
+    font-size: 13px;
+    margin-left: 8px;
+}
+
+@media (max-width: 767px) {
+    .gongshi-list-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+        padding: 16px 12px;
+    }
+
+    .gongshi-list-date {
+        font-size: 13px;
+    }
+
+    .gongshi-main-title {
+        font-size: 18px;
+    }
+
+    .gongshi-sub-title {
+        font-size: 16px;
+    }
+
+    .gongshi-detail {
+        font-size: 14px;
+    }
+}
