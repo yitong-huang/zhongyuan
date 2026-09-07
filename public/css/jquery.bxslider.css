@@ -18,12 +18,11 @@
 	position: relative;
 	margin: 0 auto;
 	padding: 0;
-	*zoom: 1;
 }
 
 .bx-wrapper img {
 	max-width: 100%;
-	/*display: block;*/
+	/*/
 }
 .bx-wrapper li{ text-align:center;}
 /** THEME
@@ -75,8 +74,6 @@
 .bx-wrapper .bx-pager .bx-pager-item,
 .bx-wrapper .bx-controls-auto .bx-controls-auto-item {
 	display: inline-block;
-	*zoom: 1;
-	*display: inline;
 }
 
 .bx-wrapper .bx-pager.bx-default-pager a {

@@ -31,8 +31,7 @@
 		showMenu: function () {
 			var $menu = $('#g-web-ul-menu');
 			if ($menu.length) {
-				$menu.css('display', '');
-				$menu.removeAttr('style');
+				$menu.removeClass('is-hidden');
 			}
 		}
 	};

@@ -1,7 +1,7 @@
 @charset "utf-8";
-*{box-sizing:border-box; -webkit-appearance: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); -webkit-touch-callout: none;}
+*{box-sizing:border-box; -webkit-appearance: none; appearance: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); -webkit-touch-callout: none;}
 *:focus{outline: none;}
-html{font-family:Arial, Helvetica, sans-serif; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; text-size-adjust: 100%;}
+html{font-family:Arial, Helvetica, sans-serif;}
 body{margin: 0;}
 body,div,span,p,a,ol,ul,li,footer,header,nav,section{padding:0; margin:0;}
 footer,header,nav,section{display: block;}
@@ -10,18 +10,18 @@ a:hover{text-decoration:underline;}
 a:active,a:hover{outline: 0;}
 img{border: 0;}
 input,textarea{margin: 0;  font: inherit;  color: inherit;}
-html input[type="button"],input[type="reset"],input[type="submit"]{-webkit-appearance: button;  cursor: pointer;}
+html input[type="button"],input[type="reset"],input[type="submit"]{-webkit-appearance: button; appearance: button;  cursor: pointer;}
 html input[disabled]{cursor: default;}
 input::-moz-focus-inner{padding: 0;  border: 0;}
 input{line-height: normal; outline:none;}
 input[type="checkbox"],input[type="radio"]{-webkit-box-sizing: border-box;  -moz-box-sizing: border-box;  box-sizing: border-box;  padding: 0;}
 input[type="number"]::-webkit-inner-spin-button,input[type="number"]::-webkit-outer-spin-button{height: auto;}
-input[type="search"]{-webkit-box-sizing: content-box;     -moz-box-sizing: content-box;    box-sizing: content-box;  -webkit-appearance: textfield;}
-input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit-search-decoration{-webkit-appearance: none;}
-input[type="text"]{-webkit-appearance: none;}
-input[type="checkbox"]{-webkit-appearance:checkbox;}
-input[type="radio"]{-webkit-appearance:radio;}
-textarea{overflow: auto; outline:none;-webkit-appearance: none;}
+input[type="search"]{-webkit-box-sizing: content-box;     -moz-box-sizing: content-box;    box-sizing: content-box;  -webkit-appearance: textfield; appearance: textfield;}
+input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit-search-decoration{-webkit-appearance: none; appearance: none;}
+input[type="text"]{-webkit-appearance: none; appearance: none;}
+input[type="checkbox"]{-webkit-appearance:checkbox; appearance:checkbox;}
+input[type="radio"]{-webkit-appearance:radio; appearance:radio;}
+textarea{overflow: auto; outline:none;-webkit-appearance: none; appearance: none;}
 table{border-spacing: 0;  border-collapse: collapse; table-layout: fixed;}
 td,th{padding: 0;}
 img{vertical-align: middle;}

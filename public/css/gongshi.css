@@ -1,7 +1,6 @@
 .gongshi-list {
     max-width: 960px;
-    margin: 0 auto;
-}
+    margin: 0 auto;}
 
 .gongshi-list-item {
     display: flex;
@@ -11,53 +10,44 @@
     border-bottom: 1px solid #e5e5e5;
     color: #333;
     text-decoration: none;
-    transition: background-color 0.2s;
-}
+    transition: background-color 0.2s;}
 
 .gongshi-list-item.animated {
-    display: flex;
-}
+    display: flex;}
 
 .gongshi-list-item:hover {
     background-color: #f8f8f8;
-    color: #333;
-}
+    color: #333;}
 
 .gongshi-list-title {
     flex: 1;
     font-size: 16px;
     line-height: 1.6;
-    padding-right: 20px;
-}
+    padding-right: 20px;}
 
 .gongshi-list-date {
     flex-shrink: 0;
     color: #888;
     font-size: 14px;
-    white-space: nowrap;
-}
+    white-space: nowrap;}
 
 .gongshi-detail {
     max-width: 900px;
     margin: 0 auto;
     color: #333;
     font-size: 15px;
-    line-height: 1.9;
-}
+    line-height: 1.9;}
 
 .gongshi-back {
-    margin-bottom: 24px;
-}
+    margin-bottom: 24px;}
 
 .gongshi-back a {
     color: #666;
-    text-decoration: none;
-}
+    text-decoration: none;}
 
 .gongshi-back a:hover {
     color: #333;
-    text-decoration: underline;
-}
+    text-decoration: underline;}
 
 .gongshi-main-title {
     text-align: center;
@@ -65,8 +55,7 @@
     font-weight: bold;
     line-height: 1.6;
     margin: 0 0 12px;
-    color: #222;
-}
+    color: #222;}
 
 .gongshi-sub-title {
     text-align: center;
@@ -74,79 +63,64 @@
     font-weight: bold;
     line-height: 1.6;
     margin: 0 0 30px;
-    color: #222;
-}
+    color: #222;}
 
 .gongshi-content {
-    margin-bottom: 36px;
-}
+    margin-bottom: 36px;}
 
 .gongshi-content p {
     margin: 0 0 16px;
-    text-align: justify;
-}
+    text-align: justify;}
 
 .gongshi-content a {
-    color: #0066cc;
-}
+    color: #0066cc;}
 
 .gongshi-sign {
     text-align: right;
     margin: 40px 0 36px;
-    line-height: 1.8;
-}
+    line-height: 1.8;}
 
 .gongshi-sign p {
-    margin: 0;
-}
+    margin: 0;}
 
 .gongshi-attachments {
     border-top: 1px solid #e5e5e5;
-    padding-top: 24px;
-}
+    padding-top: 24px;}
 
 .gongshi-attachments h3 {
     font-size: 16px;
     margin: 0 0 16px;
-    color: #222;
-}
+    color: #222;}
 
 .gongshi-attachments ul {
     list-style: none;
     margin: 0;
-    padding: 0;
-}
+    padding: 0;}
 
 .gongshi-attachments li {
     padding: 10px 0;
-    border-bottom: 1px dashed #eee;
-}
+    border-bottom: 1px dashed #eee;}
 
 .gongshi-attachments a {
     color: #0066cc;
-    text-decoration: none;
-}
+    text-decoration: none;}
 
 .gongshi-attachments a:hover {
-    text-decoration: underline;
-}
+    text-decoration: underline;}
 
 .gongshi-file-size {
     color: #999;
     font-size: 13px;
-    margin-left: 8px;
-}
+    margin-left: 8px;}
 
 /* 留言表单：文字左对齐 + 验证码图与提交靠右 */
 .w-form .w-form-UL .w-label-form {
     width: 4.5em !important;
     white-space: nowrap;
-    text-align: left !important;
-}
+    text-align: left !important;}
 
 .w-form .w-form-UL .w-form-fr {
-    margin-left: 5em !important;
-}
+    margin-left: 5em !important;}
 
 .w-form .form-captcha-submit-row {
     display: flex;
@@ -154,14 +128,12 @@
     gap: 10px;
     width: 100%;
     margin-bottom: 1em;
-    box-sizing: border-box;
-}
+    box-sizing: border-box;}
 
 .w-form .form-captcha-submit-row .w-form-code {
     flex: 1 1 auto;
     min-width: 0;
-    margin-bottom: 0;
-}
+    margin-bottom: 0;}
 
 .w-form .form-captcha-submit-row .captcha-code {
     flex: 0 0 auto;
@@ -181,195 +153,161 @@
     cursor: pointer;
     -webkit-user-select: none;
     user-select: none;
-    font-family: Consolas, Monaco, monospace;
-}
+    font-family: Consolas, Monaco, monospace;}
 
 .w-form .form-captcha-submit-row .captcha-code:hover {
-    background: linear-gradient(135deg, #eee 0%, #ddd 100%);
-}
+    background: linear-gradient(135deg, #eee 0%, #ddd 100%);}
 
 .w-form .form-captcha-submit-row .w-form-submit {
     flex: 0 0 auto;
-    margin: 0 0 4px;
-}
+    margin: 0 0 4px;}
 
 .w-form .form-captcha-submit-row .w-form-submit .w-buttom {
-    margin: 0;
-}
+    margin: 0;}
 
 .w-form .form-captcha-submit-row .w-form-submit .w-buttom .btn-default-w {
     width: auto !important;
     min-width: 5.5em;
     padding-left: 22px;
     padding-right: 22px;
-    box-sizing: border-box;
-}
+    box-sizing: border-box;}
 
 .w-form-code .captcha-row {
-    margin-bottom: 0;
-}
+    margin-bottom: 0;}
 
 .w-form-code .captcha-fr {
-    display: block;
-}
+    display: block;}
 
 .w-form-code .captcha-input {
     width: 100% !important;
     max-width: none;
-    box-sizing: border-box;
-}
+    box-sizing: border-box;}
 
 @media (max-width: 767px) {
     .w-form .w-form-UL .w-label-form {
         width: auto !important;
         white-space: nowrap;
         float: none;
-        text-align: left !important;
-    }
+        text-align: left !important;}
 
     .w-form .w-form-UL .w-form-fr {
-        margin-left: 0 !important;
-    }
+        margin-left: 0 !important;}
 
     .w-form .form-captcha-submit-row {
         flex-wrap: wrap;
-        align-items: flex-end;
-    }
+        align-items: flex-end;}
 
     .w-form .form-captcha-submit-row .w-form-code {
         flex: 1 1 100%;
-        width: 100%;
-    }
+        width: 100%;}
 
     .w-form .form-captcha-submit-row .captcha-code {
-        margin-left: auto;
-    }
+        margin-left: auto;}
 
     .w-form .form-captcha-submit-row .w-form-submit {
-        flex: 0 0 auto;
-    }
+        flex: 0 0 auto;}
 
     .w-form .form-captcha-submit-row .w-form-submit .w-buttom .btn-default-w {
-        width: auto !important;
-    }
+        width: auto !important;}
 
     .gongshi-list-item {
         flex-direction: column;
         align-items: flex-start;
         gap: 8px;
-        padding: 16px 12px;
-    }
+        padding: 16px 12px;}
 
     .gongshi-list-date {
-        font-size: 13px;
-    }
+        font-size: 13px;}
 
     .gongshi-main-title {
-        font-size: 18px;
-    }
+        font-size: 18px;}
 
     .gongshi-sub-title {
-        font-size: 16px;
-    }
+        font-size: 16px;}
 
     .gongshi-detail {
-        font-size: 14px;
-    }
+        font-size: 14px;}
 }
 
 /* 从内联 style 迁出的通用样式 */
 .w-nav .nav_inner > li > a,
 .w-nav .nav_inner > li > .li-parent-div > a {
-    font-weight: bold;
-}
+    font-weight: bold;}
 
 @media (min-width: 960px) {
     .w-nav .nav_inner > li > a,
     .w-nav .nav_inner > li > .li-parent-div > a {
-        font-weight: bold;
-    }
+        font-weight: bold;}
 }
 
 .is-hidden {
-    display: none;
+    display: none;}
+
+@media (max-width: 767px) {
+    .bannerBox {
+        width: 100%;
+        margin-left: 0;}
 }
 
 .w-space.space-h20 {
-    height: 20px;
-}
+    height: 20px;}
 
 .w-space.space-h35 {
-    height: 35px;
-}
+    height: 35px;}
 
 .w-space.space-h40 {
-    height: 40px;
-}
+    height: 40px;}
 
 .contact-title-bold {
-    font-weight: bold;
-}
+    font-weight: bold;}
 
 .contact-company-name {
     color: #444;
     font-size: large;
-    background-color: transparent;
-}
+    background-color: transparent;}
 
 .contact-text-plain {
-    background-color: transparent;
-}
+    background-color: transparent;}
 
 .w-form .w-textarea-form {
-    height: 5em;
-}
+    height: 5em;}
 
 .w-simImg {
     cursor: pointer;
-    text-align: center;
-}
+    text-align: center;}
 
 .w-simImg a {
-    cursor: default;
-}
+    cursor: default;}
 
 .w-productList .aspectRatio {
-    padding-bottom: 75%;
-}
+    padding-bottom: 75%;}
 
 .w-prd-infobox {
-    text-align: center;
-}
+    text-align: center;}
 
 .w-prd-sum.is-hidden,
 .w-productList .w-prd-sum.is-hidden {
-    display: none;
-}
+    display: none;}
 
 .w-productList1 .g-f64376208dc94d8983b91829dcaebc40 {
-    width: 33.32%;
-}
+    width: 33.32%;}
 
 /* 关于我们 */
 #section-503860,
 .section-about {
-    color: #ffffff;
-}
+    color: #ffffff;}
 
 .about-copy {
     color: #000;
     font-size: 18px;
     font-family: Calibri, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
-    line-height: 1.7;
-}
+    line-height: 1.7;}
 
 .about-copy p {
     margin: 0;
     text-indent: 2em;
     direction: ltr;
-    unicode-bidi: embed;
-}
+    unicode-bidi: embed;}
 
 .about-copy .about-name {
-    font-weight: bold;
-}
+    font-weight: bold;}
