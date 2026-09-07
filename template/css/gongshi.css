@@ -14,6 +14,10 @@
     transition: background-color 0.2s;
 }
 
+.gongshi-list-item.animated {
+    display: flex;
+}
+
 .gongshi-list-item:hover {
     background-color: #f8f8f8;
     color: #333;
