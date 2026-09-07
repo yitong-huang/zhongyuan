@@ -13,4 +13,4 @@ Disallow: /docs/
 Disallow: /.idea/
 Disallow: /deploy.sh
 
-Sitemap: http://jhd-ceramics.com/sitemap.xml
+Sitemap: https://jhd-ceramics.com/sitemap.xml
