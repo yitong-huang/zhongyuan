@@ -1,6 +1,5 @@
 /**
  * 静态站点留言表单：本地验证码 + FormSubmit 投递
- * 需在 jquery.form.js 之后加载
  */
 (function ($) {
     var RECEIVER_EMAIL = 'manshuangli@outlook.com';
@@ -51,7 +50,6 @@
             '  </div>' +
             '</div>'
         );
-        // 验证码图放在下划线区域外，与提交按钮同一行靠右
         $('<span class="captcha-code" title="' + tip + '"></span>').insertAfter($codeBox);
         refreshCaptcha($codeBox);
         $codeBox.siblings('.captcha-code').add($codeBox.find('.captcha-code')).on('click', function () {
@@ -75,7 +73,6 @@
     }
 
     function widenFormLabels($form) {
-        // 覆盖页面内联 2em 宽度；左对齐使「电话/内容」与「姓名/邮箱」文字对齐
         $form.find('.w-label-form').each(function () {
             $(this).css({ width: '4.5em', whiteSpace: 'nowrap', textAlign: 'left' });
         });
@@ -84,15 +81,37 @@
         });
     }
 
-    function pickFieldValue(formItem, names) {
-        for (var i = 0; i < formItem.length; i++) {
-            if (!formItem[i] || !formItem[i].name) continue;
-            var n = String(formItem[i].name).toLowerCase();
-            for (var j = 0; j < names.length; j++) {
-                if (n === names[j].toLowerCase()) {
-                    return formItem[i].value || '';
-                }
+    function syncTextarea($form) {
+        var $ta = $form.find('textarea').first();
+        if (!$ta.length) {
+            return;
+        }
+        var $hidden = $ta.next('input:hidden');
+        $ta.off('input.contactSync').on('input.contactSync', function () {
+            if ($hidden.length) {
+                $hidden.val($ta.val());
             }
+        });
+    }
+
+    function readFields($form) {
+        return {
+            name: $.trim($form.find('#contact-name, input[type="text"]').not('[name="captcha"]').first().val() || ''),
+            email: $.trim($form.find('#contact-email, input[type="email"]').first().val() || ''),
+            phone: $.trim($form.find('#contact-phone, input[type="tel"]').first().val() || ''),
+            message: $.trim($form.find('#tagc48da7dd3191299dfa03dd7dd0eb91a0, textarea').first().val() || '')
+        };
+    }
+
+    function validate(fields) {
+        if (!fields.name) {
+            return t('请填写姓名', 'Name is required');
+        }
+        if (!fields.email) {
+            return t('请填写邮箱', 'Email is required');
+        }
+        if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(fields.email)) {
+            return t('邮箱格式不正确', 'Email format is invalid');
         }
         return '';
     }
@@ -107,17 +126,20 @@
         }
         $btn.data('do', '1');
 
-        var formComData = $.formComData($btn);
-        if (formComData === false) {
+        var $form = $('#' + $btn.data('comtag'));
+        var fields = readFields($form);
+        var err = validate(fields);
+        if (err) {
+            layer.alert(err, function (index) {
+                layer.close(index);
+            });
             resetButton($btn);
             return;
         }
 
-        var $form = $('#' + $btn.data('comtag'));
         var $codeBox = $form.find('.w-form-code');
         var expect = String($codeBox.data('expect-captcha') || '').toUpperCase();
-        var input = String(formComData.data.captcha || '').toUpperCase();
-
+        var input = String($form.find('input[name="captcha"]').val() || '').toUpperCase();
         if (!expect || input !== expect) {
             layer.alert(t('验证码错误，请重新输入', 'Incorrect captcha, please try again'), function (index) {
                 $codeBox.find('input[name="captcha"]').focus();
@@ -129,17 +151,11 @@
             return;
         }
 
-        var items = formComData.data.formItem || [];
-        var name = pickFieldValue(items, ['Name', '姓名']);
-        var email = pickFieldValue(items, ['Email', '邮箱']);
-        var phone = pickFieldValue(items, ['Telephone', 'Phone', '电话']);
-        var message = pickFieldValue(items, ['Content', 'Message', '内容', '留言']);
-
         var payload = {
-            name: name,
-            email: email,
-            phone: phone,
-            message: message,
+            name: fields.name,
+            email: fields.email,
+            phone: fields.phone,
+            message: fields.message,
             _subject: t('官网留言 - 潮州市中原陶瓷颜料有限公司', 'Website Inquiry - Zhongyuan Ceramics'),
             _template: 'table',
             _captcha: 'false'
@@ -160,16 +176,15 @@
                     window.location.reload();
                 });
             },
-            error: function (xhr) {
+            error: function () {
                 resetButton($btn);
                 refreshCaptcha($codeBox);
-                // FormSubmit 首次使用需邮箱确认，或网络受限时降级到 mailto
                 var subject = encodeURIComponent(payload._subject);
                 var body = encodeURIComponent(
-                    t('姓名', 'Name') + ': ' + name + '\n' +
-                    t('邮箱', 'Email') + ': ' + email + '\n' +
-                    t('电话', 'Phone') + ': ' + phone + '\n\n' +
-                    t('留言', 'Message') + ':\n' + message
+                    t('姓名', 'Name') + ': ' + fields.name + '\n' +
+                    t('邮箱', 'Email') + ': ' + fields.email + '\n' +
+                    t('电话', 'Phone') + ': ' + fields.phone + '\n\n' +
+                    t('留言', 'Message') + ':\n' + fields.message
                 );
                 var mailto = 'mailto:' + RECEIVER_EMAIL + '?subject=' + subject + '&body=' + body;
                 layer.confirm(
@@ -192,9 +207,9 @@
             injectCaptcha($form.find('.w-form-code'));
             layoutCaptchaWithSubmit($form);
             widenFormLabels($form);
+            syncTextarea($form);
         });
 
-        // 覆盖原 CMS 提交逻辑
         $('.g-form-components').off('click').on('click', function (e) {
             e.preventDefault();
             handleSubmit($(this));

@@ -18,12 +18,6 @@
 # Deploy script (contains credentials)
 deploy.sh
 
-# SSL private keys / local cert packages
-cert/*.key
-cert/*.zip
-*.pem
-*.key
-
 # Logs / temp
 *.log
 *.tmp
