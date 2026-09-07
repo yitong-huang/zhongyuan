@@ -63,57 +63,20 @@
     <!--[if gte IE 9]>
     <script src="public/js/base.js"></script>
     <![endif]-->
-    <!--[if lt IE 9]>
-    <script src="public/js/selectivizr.js"></script>
-    <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-    <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
-    <script src="//cdn.bootcss.com/modernizr/2.8.2/modernizr.min.js"></script>
-    <![endif]-->
-    <link href="public/naples/plugins/lightbox/css/lightbox.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="public/banner/css/swiper.min.css">
-    <script src="public/banner/js/swiper.min.js"></script>
-    <script src="public/js/jquery.SuperSlide.js"></script>
-    <script src="public/js/common.js?1"></script>
+<script src="public/js/common.js?1"></script>
     <script src="public/js/theme.js"></script>
     <!-- feib -->
     <script type="text/javascript" src="public/naples/plugins/layer/layer.js"></script>
     <!-- plugins -->
-    <script type="text/javascript" src="public/naples/plugins/jQuery.formsValidation.js"></script>
-    <script type="text/javascript" src="public/naples/plugins/jQuery.nodeCommon.js"></script>
-    <script type="text/javascript" src="public/naples/plugins/extend.js"></script>
-    <link rel="stylesheet" href="public/css/animate.min.css">
+<script type="text/javascript" src="public/naples/plugins/jQuery.nodeCommon.js"></script>
+    <script type="text/javascript" src="public/js/list-row.js"></script>
+<link rel="stylesheet" href="public/css/animate.min.css">
     <script src="public/js/animate.min.js"></script>
-    <script type="text/javascript" src="public/js/components.js"></script>
-    <script type="text/javascript" src="public/naples/js/jquery.menu_style.js"></script>
+<script type="text/javascript" src="public/naples/js/jquery.menu_style.js"></script>
     <script type="text/javascript" src="public/naples/js/jquery.init.js"></script>
-    <link rel="stylesheet" href="public/css/jquery.mCustomScrollbar.css">
-    <script src="public/js/jquery.mCustomScrollbar.concat.min.js"></script>
-    <script type="text/javascript">
+<script type="text/javascript">
         $(function(){
             dataAnimate();
-            (function($,lanno){
-                if(lanno === "" || lanno === "default"){
-                    return '';
-                }
-
-                $(".w-languege").each(function(){
-                    $(this).find("a").each(function(){
-                        if($(this).data("lanno") === lanno){
-                            $(this).addClass("cur");
-                        }else{
-                            if($(this).hasClass("cur")){
-                                $(this).removeClass("cur");
-                            }
-                        }
-                    });
-                });
-
-                $('.w-languege-dropDown').each(function(){
-                    let lanTitle = $(this).find('.select-lang .cur').html();
-                    $(this).find('.cur-lang span').html(lanTitle);
-                });
-
-            })(jQuery,"en");
         });
     </script>
 
@@ -163,7 +126,7 @@ var currentTheme = 614;var isSubmenuShow = 1;;
                 <div class="column column9 clearfix">
                     <div class="w-nav w-nav1 g-active-add">
                         <div class="w-nav-in">
-                            <ul class="nav_inner clearfix" id="g-web-ul-menu">
+                            <ul class="nav_inner clearfix" id="g-web-ul-menu" style="display:none;">
                                 <li data-menuid="36022"><a href="index.html" data-action="36022">HOME</a><i
                                         class="nav_simpline_cur"></i></li>
                                 <li data-menuid="36023"><a href="products.html" data-action="36023">PRODUCTS</a><i
@@ -231,7 +194,6 @@ var currentTheme = 614;var isSubmenuShow = 1;;
                 <div class="topLogBox topLogBoxTel">
                     <div class="topLogBox-in">
                         <div class="col-com">
-
 
                         </div>
                     </div>
@@ -820,96 +782,8 @@ var currentTheme = 614;var isSubmenuShow = 1;;
 </div>
 
 <div class="topTel" onclick="$('body,html').animate({scrollTop: 0}, 500);"><i class="fa fa-arrow-up"></i></div>
-<script type="text/javascript" src="public/naples/js/jquery.global.js"></script>
 <script type="text/javascript" src="public/naples/js/jquery.form.js"></script>
 <script type="text/javascript" src="public/js/contact-form.js"></script>
-<script type="text/javascript" src="public/naples/plugins/lightbox/js/lightbox.min.js"></script>
-<script type="text/javascript" src="public/naples/js/jquery.custom.js"></script>
-<script src="public/js/tabMu.js"></script>
-<script src="public/js/fold.js"></script>
-<!-------手风琴------------>
-<script src="public/js/accordion.js"></script>
-<!-------手风琴 end------------>
-<!-------标签切换------------>
-<script src="public/js/tabVMu.js"></script>
-<script type="text/javascript" src="public/js/distpicker/distpicker.data.min.js"></script>
-<script type="text/javascript" src="public/js/distpicker/distpicker.js"></script>
-<script type="text/javascript" src="public/js/distpicker/distpicker.main.js"></script>
-<script src="public/js/menuH.js"></script>
-<script src="public/js/menuV.js"></script>
-<script>
-    (function($){
-        $(window).on("load",function(){
-            if($(window).width()<=960){
-                $(".tabVMu").each(function(index, element) {
-                    $(this).mCustomScrollbar({
-                        scrollButtons:{
-                            enable:false
-                        },
-                        advanced:{
-                            autoExpandHorizontalScroll:true,
-                            autoScrollOnFocus:true
-                        },
-                        scrollInertia:550,
-                        horizontalScroll:true,
-                        autoHideScrollbar:true
-                    });
-                });
-            }
-        });
-    })(jQuery);
-    (function($){
-        $(window).on("load",function(){
-            $(".tabMu").each(function(index, element) {
-                $(this).mCustomScrollbar({
-                        scrollButtons:{
-                            enable:false
-                            },
-                        advanced:{
-                            autoExpandHorizontalScroll:true,
-                            autoScrollOnFocus:true
-                            },
-                        scrollInertia:550,
-                        horizontalScroll:true,
-                        autoHideScrollbar:true
-                });
-            });
-        });
-    })(jQuery);
-</script>
-<script src="public/js/count.js"></script>
-<script>
-    $(function(){
-        var countCXArr = [];
-        var countCX=function (){
-            $('.w-numCount').each(function(i, dom) {
-                if(countCXArr[i] && countCXArr[i] === true){
-                    return;
-                }
-                var sT;
-                var ncTop;
-                sT = $(window).scrollTop();
-                ncTop = $(dom).offset().top;
-                if (sT > ncTop-$(window).height() && sT < ncTop) {
-                    var iDom = $(dom).find('.numCX'),
-                    decimals = 0,
-                    startVal = iDom.attr('data-startVal'),
-                    endVal = iDom.attr('data-endVal'),
-                    duration = iDom.attr('data-speed');
-                    // target：目标元素id, startVal：你想要开始的值, endVal：你想要到达的值, decimals：小数位数，默认值为0, duration：动画持续时间为秒，默认值为2, options：选项的可选对象
-                    new CountUp(iDom.attr('id'), startVal, endVal, 0, duration, {
-                        useEasing: true,//效果
-                        separator: ''//数字分隔符
-                    }).start();
-                    countCXArr[i] = true;
-                }
-            });
-        }
-        countCX();
-        $(window).on("scroll",function() {
-            countCX();
-        })
-    });
-</script>
+
 </body>
 </html>
