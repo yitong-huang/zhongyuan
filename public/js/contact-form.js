@@ -72,15 +72,6 @@
         }
     }
 
-    function widenFormLabels($form) {
-        $form.find('.w-label-form').each(function () {
-            $(this).css({ width: '4.5em', whiteSpace: 'nowrap', textAlign: 'left' });
-        });
-        $form.find('.w-form-fr').each(function () {
-            $(this).css({ 'margin-left': '5em' });
-        });
-    }
-
     function syncTextarea($form) {
         var $ta = $form.find('textarea').first();
         if (!$ta.length) {
@@ -206,7 +197,6 @@
             var $form = $(this);
             injectCaptcha($form.find('.w-form-code'));
             layoutCaptchaWithSubmit($form);
-            widenFormLabels($form);
             syncTextarea($form);
         });
 

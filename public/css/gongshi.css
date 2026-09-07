@@ -113,14 +113,23 @@
     font-size: 13px;
     margin-left: 8px;}
 
-/* 留言表单：文字左对齐 + 验证码图与提交靠右 */
+/* 留言表单：仅显示输入框占位提示，隐藏左侧标签文字 */
 .w-form .w-form-UL .w-label-form {
-    width: 4.5em !important;
-    white-space: nowrap;
-    text-align: left !important;}
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip: rect(0, 0, 0, 0) !important;
+    white-space: nowrap !important;
+    border: 0 !important;
+    float: none !important;
+}
 
 .w-form .w-form-UL .w-form-fr {
-    margin-left: 5em !important;}
+    margin-left: 0 !important;
+}
 
 .w-form .form-captcha-submit-row {
     display: flex;
@@ -184,12 +193,6 @@
     box-sizing: border-box;}
 
 @media (max-width: 767px) {
-    .w-form .w-form-UL .w-label-form {
-        width: auto !important;
-        white-space: nowrap;
-        float: none;
-        text-align: left !important;}
-
     .w-form .w-form-UL .w-form-fr {
         margin-left: 0 !important;}
 
