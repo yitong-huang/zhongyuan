@@ -1,0 +1,16 @@
+User-agent: *
+Allow: /
+
+# Google
+User-agent: Googlebot
+Allow: /
+
+# Baidu
+User-agent: Baiduspider
+Allow: /
+
+Disallow: /docs/
+Disallow: /.idea/
+Disallow: /deploy.sh
+
+Sitemap: https://jhd-ceramics.com/sitemap.xml
