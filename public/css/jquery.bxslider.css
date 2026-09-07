@@ -22,7 +22,7 @@
 
 .bx-wrapper img {
 	max-width: 100%;
-	/*/
+	display: block;
 }
 .bx-wrapper li{ text-align:center;}
 /** THEME
@@ -185,7 +185,6 @@
 	position: absolute;
 	bottom: 0;
 	left: 0;
-	background: #666\9;
 	background: rgba(80, 80, 80, 0.75);
 	width: 100%;
 }
