@@ -45,9 +45,9 @@
         var tip = t('点击刷新', 'Click to refresh');
         $codeBox.html(
             '<div class="w-form-section w-form-UL clearfix captcha-row">' +
-            '  <label class="w-label-form"><span>' + label + '</span><span class="star_note">*</span></label>' +
+            '  <label class="w-label-form" for="contact-captcha"><span>' + label + '</span><span class="star_note">*</span></label>' +
             '  <div class="w-form-fr captcha-fr">' +
-            '    <input class="w-text-form captcha-input" type="text" name="captcha" maxlength="4" autocomplete="off" />' +
+            '    <input class="w-text-form captcha-input" id="contact-captcha" type="text" name="captcha" maxlength="4" autocomplete="off" placeholder="' + label + '" title="' + label + '" />' +
             '  </div>' +
             '</div>'
         );

@@ -179,6 +179,7 @@
     border: 1px solid #ddd;
     border-radius: 2px;
     cursor: pointer;
+    -webkit-user-select: none;
     user-select: none;
     font-family: Consolas, Monaco, monospace;
 }
@@ -274,4 +275,105 @@
     .gongshi-detail {
         font-size: 14px;
     }
+}
+
+/* 从内联 style 迁出的通用样式 */
+.w-nav .nav_inner > li > a,
+.w-nav .nav_inner > li > .li-parent-div > a {
+    font-weight: bold;
+}
+
+@media (min-width: 960px) {
+    .w-nav .nav_inner > li > a,
+    .w-nav .nav_inner > li > .li-parent-div > a {
+        font-weight: bold;
+    }
+}
+
+.is-hidden {
+    display: none;
+}
+
+#g-web-ul-menu {
+    display: none;
+}
+
+.w-space.space-h20 {
+    height: 20px;
+}
+
+.w-space.space-h35 {
+    height: 35px;
+}
+
+.w-space.space-h40 {
+    height: 40px;
+}
+
+.contact-title-bold {
+    font-weight: bold;
+}
+
+.contact-company-name {
+    color: #444;
+    font-size: large;
+    background-color: transparent;
+}
+
+.contact-text-plain {
+    background-color: transparent;
+}
+
+.w-form .w-textarea-form {
+    height: 5em;
+}
+
+.w-simImg {
+    cursor: pointer;
+    text-align: center;
+}
+
+.w-simImg a {
+    cursor: default;
+}
+
+.w-productList .aspectRatio {
+    padding-bottom: 75%;
+}
+
+.w-prd-infobox {
+    text-align: center;
+}
+
+.w-prd-sum.is-hidden,
+.w-productList .w-prd-sum.is-hidden {
+    display: none;
+}
+
+.w-productList1 .g-f64376208dc94d8983b91829dcaebc40 {
+    width: 33.32%;
+}
+
+/* 关于我们 */
+#section-503860,
+.section-about {
+    color: #ffffff;
+}
+
+.about-copy {
+    color: #000;
+    font-size: 18px;
+    font-family: Calibri, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+    line-height: 1.7;
+}
+
+.about-copy p {
+    margin: 0;
+    text-indent: 2em;
+    direction: ltr;
+    unicode-bidi: embed;
+}
+
+.about-copy .about-name {
+    font-weight: bold;
 }
